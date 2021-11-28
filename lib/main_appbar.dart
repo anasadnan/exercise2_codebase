@@ -13,8 +13,13 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return Visibility(
+      visible: _drawerItem,
       child: IconButton(
+          visualDensity: VisualDensity(horizontal: -4.0, vertical: -4.0),
+          padding: EdgeInsets.fromLTRB(5, 5, 0, 0),
           icon: Container(
+            alignment: Alignment.center,
+            child: Text(_title),
             decoration: BoxDecoration(
                 color: Colors.brown,
                 border: Border.all(width: 1.0, color: Colors.white),

@@ -5,6 +5,9 @@ import 'main_body.dart';
 import 'main_bottom_bar.dart';
 
 class MainScreen extends StatefulWidget {
+  final String title;
+  MainScreen({Key key, this.title}) : super(key: key);
+
   @override
   _MainScreenState createState() => _MainScreenState();
 }
@@ -37,27 +40,27 @@ class _MainScreenState extends State<MainScreen> {
           MainAppBar(
             state: this,
             title: "-",
-            drawerItem: null,
+            drawerItem: _drawerItem.values.elementAt(0),
           ),
           MainAppBar(
             state: this,
             title: "S",
-            drawerItem: null,
+            drawerItem: _drawerItem.values.elementAt(0),
           ),
           MainAppBar(
             state: this,
             title: "M",
-            drawerItem: null,
+            drawerItem: _drawerItem.values.elementAt(0),
           ),
           MainAppBar(
             state: this,
             title: "L",
-            drawerItem: null,
+            drawerItem: _drawerItem.values.elementAt(0),
           ),
           MainAppBar(
             state: this,
             title: "+",
-            drawerItem: null,
+            drawerItem: _drawerItem.values.elementAt(0),
           ),
         ],
       ),
@@ -81,7 +84,8 @@ class _MainScreenState extends State<MainScreen> {
             }),
       ),
       body: MainBody(state: this),
-      bottomNavigationBar: MainBottomBar(),
+      bottomNavigationBar: MainBottomBar(
+          state: this, drawerItem: _drawerItem.values.elementAt(1)),
     );
   }
 }
