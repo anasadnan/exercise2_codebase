@@ -13,11 +13,11 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  var _drawerItem = {"Allow Resize?": true, "Alow change primer color?": true};
+  var _drawerItem = {"Allow Resize?": true, "Allow change primer color?": true};
 
-  var _red;
-  var _green;
-  var _blue;
+  var _red = 0.0;
+  var _green = 0.0;
+  var _blue = 0.0;
 
   var _size = 400.0;
   get size => _size;
@@ -38,30 +38,25 @@ class _MainScreenState extends State<MainScreen> {
         backgroundColor: Colors.brown,
         actions: [
           MainAppBar(
-            state: this,
-            title: "-",
-            drawerItem: _drawerItem.values.elementAt(0),
-          ),
+              state: this,
+              title: "-",
+              drawerItem: _drawerItem.values.elementAt(0)),
           MainAppBar(
-            state: this,
-            title: "S",
-            drawerItem: _drawerItem.values.elementAt(0),
-          ),
+              state: this,
+              title: "S",
+              drawerItem: _drawerItem.values.elementAt(0)),
           MainAppBar(
-            state: this,
-            title: "M",
-            drawerItem: _drawerItem.values.elementAt(0),
-          ),
+              state: this,
+              title: "M",
+              drawerItem: _drawerItem.values.elementAt(0)),
           MainAppBar(
-            state: this,
-            title: "L",
-            drawerItem: _drawerItem.values.elementAt(0),
-          ),
+              state: this,
+              title: "L",
+              drawerItem: _drawerItem.values.elementAt(0)),
           MainAppBar(
-            state: this,
-            title: "+",
-            drawerItem: _drawerItem.values.elementAt(0),
-          ),
+              state: this,
+              title: "+",
+              drawerItem: _drawerItem.values.elementAt(0)),
         ],
       ),
       drawer: Drawer(

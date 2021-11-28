@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'slider.dart';
+import 'Slider.dart';
 
 class MainBottomBar extends StatelessWidget {
   final _state;
@@ -12,7 +12,7 @@ class MainBottomBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 180.0,
+      height: 150,
       child: Padding(
         padding: const EdgeInsets.fromLTRB(0, 0, 10, 0),
         child: Column(children: [

@@ -7,6 +7,7 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
       : _state = state,
         _title = title,
         _drawerItem = drawerItem;
+
   @override
   Size get preferredSize => Size.fromHeight(60.0);
 
@@ -36,11 +37,11 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
               case 'L':
                 _state.size = 500.0;
                 break;
-              case '-':
-                _state.size = _state.size - 50.0;
-                break;
               case '+':
                 _state.size = _state.size + 50.0;
+                break;
+              case '-':
+                _state.size = _state.size - 50.0;
                 break;
             }
           }),
